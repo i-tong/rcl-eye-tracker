@@ -14,12 +14,12 @@ CONFIG += c++11
 
 QMAKE_CXXFLAGS_RELEASE += -O2
 
-DESTDIR = $$PWD/../../build/
-Release:DESTDIR = $$PWD/../../build/release
-Release:OBJECTS_DIR = $$PWD/../../build/release/.obj
-Release:MOC_DIR = $$PWD/../../build/release/.moc
-Release:RCC_DIR = $$PWD/../../build/release/.rcc
-Release:UI_DIR = $$PWD/../../build/release/.ui
+DESTDIR =               $$PWD/../../build/
+Release:DESTDIR =       $$PWD/../../build/release
+Release:OBJECTS_DIR =   $$PWD/../../build/release/.obj
+Release:MOC_DIR =       $$PWD/../../build/release/.moc
+Release:RCC_DIR =       $$PWD/../../build/release/.rcc
+Release:UI_DIR =        $$PWD/../../build/release/.ui
 
 SOURCES += \
         Gui.cpp \
@@ -75,8 +75,6 @@ INCLUDEPATH += $$PWD/../../include/EyeGazeCameraLib
 LIBS += -L$$PWD/../../lib/opencv/lib opencv_world330.lib
 LIBS += -L$$PWD/../../lib/boost/lib boost_system-vc140-mt-x64-1_66.lib boost_chrono-vc140-mt-x64-1_66.lib boost_thread-vc140-mt-x64-1_66.lib boost_timer-vc140-mt-x64-1_66.lib
 LIBS += -L$$PWD/../../lib/EyeGazeLib/lib -lEyeGazeCalibrationLib -lEyeGazeTrackerLib -lEyeGazeDetectionLib -lEyeGazeCameraLib
-
-#LIBS += -L$$PWD/../Release/ -lEyeGazeDetectionLib -lEyeGazeCalibrationLib -lEyeGazeCameraLib -lEyeTrackerLib
 
 }else:unix {
 INCLUDEPATH += $$PWD/../UtilLib
